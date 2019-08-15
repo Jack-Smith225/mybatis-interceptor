@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "9af8aa22-e38b-45d5-8fc6-a570be0292cf",
+		"name": "mybatis-interceptor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/findById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/findById?userId=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"findById"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/findByName?userName=李四",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/findByName?userName=李四",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"findByName"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "李四"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/findByNameAndBirthday?userName=李四&birthday=1991-05-12",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/findByNameAndBirthday?userName=李四&birthday=1991-05-12",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"findByNameAndBirthday"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "李四"
+						},
+						{
+							"key": "birthday",
+							"value": "1991-05-12"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/findAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/findAll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

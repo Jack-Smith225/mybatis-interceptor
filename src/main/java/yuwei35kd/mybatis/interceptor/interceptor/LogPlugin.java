@@ -14,10 +14,8 @@ import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.type.TypeHandlerRegistry;
-import org.springframework.stereotype.Component;
 
 import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -41,7 +39,7 @@ import java.util.Properties;
                 args = {MappedStatement.class, Object.class}
         )
 })
-public class LogInterceptor implements Interceptor {
+public class LogPlugin implements Interceptor {
 
     /**
      * 是否显示语句的执行时间
@@ -140,7 +138,6 @@ public class LogInterceptor implements Interceptor {
             value = "'" + obj.toString() + "'";
         } else if (obj instanceof Date) {
             DateFormat formatter = DateFormat.getDateTimeInstance(DateFormat.DEFAULT, DateFormat.DEFAULT, Locale.CHINA);
-            //SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             value = "'" + formatter.format(obj) + "'";
         } else {
             if (obj != null) {
@@ -148,7 +145,6 @@ public class LogInterceptor implements Interceptor {
             } else {
                 value = "";
             }
-
         }
         // 对特殊字符进行转义，方便之后处理替换
         return value != null ? makeQueryStringAllRegExp(value) : value;

@@ -10,12 +10,9 @@ import org.springframework.web.servlet.ModelAndView;
 import yuwei35kd.mybatis.interceptor.config.LanguageThreadLocal;
 
 public class MyInterceptor implements HandlerInterceptor {
-    Logger logger = LoggerFactory.getLogger(MyInterceptor.class);
 
     @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
-            throws Exception {
-        logger.info("preHandle :" + request.getContextPath());
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler){
         String language= request.getParameter("language");
         if(language == null || language.isEmpty()){
             language = "zh";

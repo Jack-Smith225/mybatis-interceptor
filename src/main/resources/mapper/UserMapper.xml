@@ -3,22 +3,22 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="yuwei35kd.mybatis.interceptor.dao.UserDao">
     <select id="findById" resultType="User">
-        select user_id,birthday,${language}_name as user_name from user
+        select user_id,birthday,@language_name as user_name from user
         where user_id = #{userId}
     </select>
 
     <select id="findByName" resultType="User">
-        select user_id,birthday,${language}_name as user_name from user
+        select user_id,birthday,@language_name as user_name from user
         where user_name = #{userName}
     </select>
 
     <select id="findByNameAndBirthday" resultType="User">
-        select user_id,birthday,${language}_name as user_name from user
+        select user_id,birthday,@language_name as user_name from user
         where user_name = #{userName} and birthday = #{birthday}
     </select>
 
     <select id="findAll" resultType="User">
-        select user_id,birthday,${language}_name as user_name from user
+        select user_id,birthday,@language_name as user_name from user
     </select>
 
 </mapper>
