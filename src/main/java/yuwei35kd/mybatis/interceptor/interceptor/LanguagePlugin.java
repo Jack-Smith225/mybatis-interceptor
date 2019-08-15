@@ -1,26 +1,20 @@
 package yuwei35kd.mybatis.interceptor.interceptor;
 
-import org.apache.ibatis.binding.MapperMethod;
 import org.apache.ibatis.builder.StaticSqlSource;
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.BoundSql;
 import org.apache.ibatis.mapping.MappedStatement;
-import org.apache.ibatis.mapping.ParameterMapping;
 import org.apache.ibatis.mapping.SqlSource;
 import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.plugin.Intercepts;
 import org.apache.ibatis.plugin.Invocation;
 import org.apache.ibatis.plugin.Plugin;
 import org.apache.ibatis.plugin.Signature;
-import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.RowBounds;
-import org.springframework.beans.BeanUtils;
 import yuwei35kd.mybatis.interceptor.config.LanguageThreadLocal;
 import yuwei35kd.mybatis.interceptor.utils.ReflectUtil;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
 
 @Intercepts({
