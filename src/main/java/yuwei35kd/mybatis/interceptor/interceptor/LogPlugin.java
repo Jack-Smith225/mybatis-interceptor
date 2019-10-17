@@ -62,7 +62,18 @@ public class LogPlugin implements Interceptor {
         Configuration configuration = mappedStatement.getConfiguration();
         long sqlStartTime = System.currentTimeMillis();
         Object re = invocation.proceed();
-        long sqlEndTime = System.currentTimeMillis();
+
+        //tag::打印最简单的sql id
+      System.out.println(
+        "执行的sql的 id是： " + sqlId
+      );
+
+      System.out.println(
+        "执行的sql是： " + boundSql.getSql()
+      );
+        //end::打印最简单的sql id
+
+        /*long sqlEndTime = System.currentTimeMillis();
         // 打印mysql执行语句
         String sql = getSql(configuration, boundSql, sqlId);
         System.out.println(sql);
@@ -70,7 +81,8 @@ public class LogPlugin implements Interceptor {
         if (enableExecutorTime) {
             String sqlTimeLog = sqlId + " 方法对应sql执行时间:" + (sqlEndTime - sqlStartTime) + " ms";
             System.out.println(sqlTimeLog);
-        }
+        }*/
+
         return re;
     }
 
