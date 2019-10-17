@@ -1,7 +1,5 @@
 package yuwei35kd.mybatis.interceptor.bean;
 
-import java.util.Date;
-
 public class User {
     private Integer userId;
     private String userName;

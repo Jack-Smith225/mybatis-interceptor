@@ -1,12 +1,12 @@
 package yuwei35kd.mybatis.interceptor.controller;
 
+import javax.annotation.Resource;
+import java.util.List;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import yuwei35kd.mybatis.interceptor.bean.User;
 import yuwei35kd.mybatis.interceptor.service.UserService;
-
-import javax.annotation.Resource;
-import java.util.List;
 
 @RestController
 public class UserController {

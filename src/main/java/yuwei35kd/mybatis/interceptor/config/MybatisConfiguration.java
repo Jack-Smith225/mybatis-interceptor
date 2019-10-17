@@ -1,11 +1,11 @@
 package yuwei35kd.mybatis.interceptor.config;
 
+import java.util.Properties;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import yuwei35kd.mybatis.interceptor.interceptor.LanguagePlugin;
 import yuwei35kd.mybatis.interceptor.interceptor.LogPlugin;
-
-import java.util.Properties;
 
 /**
  * mybatis配置

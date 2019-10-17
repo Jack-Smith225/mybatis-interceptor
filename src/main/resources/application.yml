@@ -1,10 +1,10 @@
 spring:
   datasource:
-    jdbc-url: jdbc:mysql://localhost:3306/mybatis-interceptor?characterEncoding=utf8&characterSetResults=utf8&autoReconnect=true&failOverReadOnly=false&serverTimezone=GMT%2B8&amp&useSSL=false
-    username: root
-    password:
+    jdbc-url: jdbc:mysql://remotemysql.com:3306/FVXWVw0EqY
+    username: FVXWVw0EqY
+    password: izemFbfeyJ
 server:
-  port: 8080
+  port: 9090
 mybatis:
   type-aliases-package: yuwei35kd.mybatis.interceptor.bean
   mapper-locations: classpath:/mapper/*.xml

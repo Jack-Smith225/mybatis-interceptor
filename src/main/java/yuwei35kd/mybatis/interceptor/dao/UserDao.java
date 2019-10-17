@@ -1,8 +1,8 @@
 package yuwei35kd.mybatis.interceptor.dao;
 
-import yuwei35kd.mybatis.interceptor.bean.User;
-
 import java.util.List;
+
+import yuwei35kd.mybatis.interceptor.bean.User;
 
 public interface UserDao {
     User findById(Integer userId);

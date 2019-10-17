@@ -1,5 +1,7 @@
 package yuwei35kd.mybatis.interceptor.interceptor;
 
+import java.util.Properties;
+
 import org.apache.ibatis.builder.StaticSqlSource;
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.BoundSql;
@@ -14,8 +16,6 @@ import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.RowBounds;
 import yuwei35kd.mybatis.interceptor.config.LanguageThreadLocal;
 import yuwei35kd.mybatis.interceptor.utils.ReflectUtil;
-
-import java.util.Properties;
 
 @Intercepts({
         @Signature(
